@@ -9,9 +9,9 @@ import javax.swing.JLabel;
 import component.BasicButton;
 import component.TitledTextArea;
 import data.customerData.CustomerData;
-import system.salesSystem.SalesSystem;
+import system.developSystem.DevelopSystem;
 
-public class SinginCustomerSystem extends SalesSystem {
+public class SinginCustomerSystem extends DevelopSystem {
 	// Static
 	private enum EActionCommands {SaveInsuranceData}
 	

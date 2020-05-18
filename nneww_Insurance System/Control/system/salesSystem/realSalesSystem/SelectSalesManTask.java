@@ -7,15 +7,9 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 
 import component.BasicButton;
-import data.employeeData.salesEmployeeData.SalesManData;
-import data.insuranceData.AbsInsuranceData;
-import data.taskData.realTaskData.InsuranceRatePermit;
-import system.developSystem.realDevelopSystem.developerAspect.DevelopInsuranceSystem;
-import system.developSystem.realDevelopSystem.developerAspect.SelecInsuranceToWatchSystem;
-import system.developSystem.realDevelopSystem.insuranceRatePermitMan.ShowInsuranceForInsuranceRatePermit;
-import system.salesSystem.SalesSystem;
+import system.developSystem.DevelopSystem;
 
-public class SelectSalesManTask extends SalesSystem {
+public class SelectSalesManTask extends DevelopSystem {
 
 	// Static
 	private enum EActionCommands {SigninCustomer, LookupAvailableProduct}
@@ -32,7 +26,7 @@ public class SelectSalesManTask extends SalesSystem {
 	public void processEvent(ActionEvent e) {
 		switch (EActionCommands.valueOf(e.getActionCommand())) {
 		case SigninCustomer : this.startNewSystem(new SinginCustomerSystem());break;
-		case LookupAvailableProduct : this.startNewSystem(new ShowCustomerSystem()); break;
+		case LookupAvailableProduct : this.startNewSystem(new SearchCustomerSystem()); break;
 		}
 	}
 }

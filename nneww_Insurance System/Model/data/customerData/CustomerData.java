@@ -1,6 +1,7 @@
 package data.customerData;
 
 import data.ISData;
+import data.insuranceData.AbsInsuranceData;
 
 public class CustomerData extends ISData {
 	// Attribute
@@ -8,11 +9,20 @@ public class CustomerData extends ISData {
 	private String residence;
 	private String phoneNum;
 	private String email;
+	private int[] signInInsurance;
 	private String socialSecurityNum;
 	private String job;
 	private String property;
 	private String age;
 	private String accountNum;
+	
+	
+	// add & delete & search
+	public void addSignInInsurance(int insuranceNum) {
+		int length = this.signInInsurance.length;
+		this.signInInsurance[length]=insuranceNum;
+		//sorting«ÿ¡Ÿ ∞Õ.
+	}
 	
 	// getter & setter
 	public String getName() {return name;}
@@ -33,5 +43,6 @@ public class CustomerData extends ISData {
 	public void setAge(String age) {this.age = age;}
 	public String getAccountNum() {return accountNum;}
 	public void setAccountNum(String accountNum) {this.accountNum = accountNum;}
+	
 	
 }

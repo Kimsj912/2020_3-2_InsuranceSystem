@@ -11,9 +11,9 @@ import component.BasicButton;
 import data.customerData.CustomerData;
 import dataList.IntISDataList;
 import dataList.realDataList.ISDataList;
-import system.salesSystem.SalesSystem;
+import system.developSystem.DevelopSystem;
 
-public class ShowCustomerSystem extends SalesSystem {
+public class SearchCustomerSystem extends DevelopSystem {
 
 	private enum EActionCommands {search}
 

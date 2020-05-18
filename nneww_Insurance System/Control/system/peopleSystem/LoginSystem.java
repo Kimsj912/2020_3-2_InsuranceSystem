@@ -19,7 +19,7 @@ import system.salesSystem.realSalesSystem.SelectSalesManTask;
 public class LoginSystem extends DevelopSystem {
 
 	// Static
-	private enum EActionCommands {Login, LogInDeveloper, LoginInsuranceRatePermitMan, LoginProductPermitMan}
+	private enum EActionCommands {Login, LogInDeveloper, LoginInsuranceRatePermitMan, LoginProductPermitMan, SalesMan, SalesManager}
 
 	private JTextField id;
 	private JPasswordField pw;

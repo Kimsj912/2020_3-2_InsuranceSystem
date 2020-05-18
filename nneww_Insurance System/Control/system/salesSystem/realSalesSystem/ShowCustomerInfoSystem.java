@@ -10,10 +10,9 @@ import javax.swing.JTextField;
 import component.BasicButton;
 import data.customerData.CustomerData;
 import dataList.IntISDataList;
-import system.developSystem.realDevelopSystem.developerAspect.DevelopInsuranceSystem;
-import system.salesSystem.SalesSystem;
+import system.developSystem.DevelopSystem;
 
-public class ShowCustomerInfoSystem extends SalesSystem {
+public class ShowCustomerInfoSystem extends DevelopSystem {
 
 	private IntISDataList<CustomerData> searchedCustomerList;
 	private JTextField searchedNameTTA;
@@ -29,7 +28,7 @@ public class ShowCustomerInfoSystem extends SalesSystem {
 		if (this.searchedCustomerList.getList().isEmpty()) {
 			viewInfo.add(new JLabel(this.searchedNameTTA.getText() + "님은 시스템에 존재하지 않습니다. 다시한번 확인해주십시오"));
 		} else {
-			//테이블을 만들장 나중에
+			//테이블을 만들장 나중에 (고객명, 고객아이디, 전화번호, 성별, 나이, 주민번호)보여줘야함
 			for (CustomerData customerData : this.searchedCustomerList.getList()) {
 				viewInfo.add(new BasicButton(customerData.getName(), Integer.toString(customerData.getID()), this.getAH()));
 			}

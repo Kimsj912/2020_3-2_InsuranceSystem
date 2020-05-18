@@ -11,10 +11,10 @@ import data.customerData.CustomerData;
 import data.insuranceData.AbsInsuranceData;
 import dataList.IntISDataList;
 import dataList.realDataList.ISDataList;
+import system.developSystem.DevelopSystem;
 import system.developSystem.realDevelopSystem.developerAspect.ShowInsuranceInfoSystem;
-import system.salesSystem.SalesSystem;
 
-public class ShowAvailableProduct extends SalesSystem {
+public class ShowAvailableProduct extends DevelopSystem {
 
 	private CustomerData customerData;
 	
@@ -38,6 +38,7 @@ public class ShowAvailableProduct extends SalesSystem {
 		Vector<JComponent> viewInfo = new Vector<JComponent>();
 		
 		viewInfo.add(new JLabel("보험을 선택하세요."));
+		//여기도 테이블로 보여줘야함. ㅎㅎ.... (보험 아이디, 보험명, 내용)
 		for (AbsInsuranceData insuranceData : searching().getList()) {
 			viewInfo.add(new BasicButton(insuranceData.getName(), Integer.toString(insuranceData.getID()), this.getAH()));
 		}
@@ -46,7 +47,8 @@ public class ShowAvailableProduct extends SalesSystem {
 
 	@Override
 	public void processEvent(ActionEvent e) {
-		this.startNewSystem(new ShowInsuranceInfoSystem(Integer.parseInt(e.getActionCommand())));
+		// showInsuranceInfoSystem에 true false이런거 넣어서 설정할수도 있을 것 같은데, 있는건 안건들이는게 좋으니까 일단 나눠둠.
+		this.startNewSystem(new ShowInsuranceInfoToCustomerSystem(Integer.parseInt(e.getActionCommand()), this.customerData));
 
 	}
 
