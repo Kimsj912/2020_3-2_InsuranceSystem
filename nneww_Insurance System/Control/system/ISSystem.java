@@ -22,9 +22,7 @@ public abstract class ISSystem {
 	private IntISDataList<? extends ISData>[] datas;
 	private ISSystem beforeSystem;
 	
-	protected IntISDataList<AbsInsuranceData> insuranceList; //보험 데이터 리스트
-	protected IntISDataList<CustomerData> customerList; //보험 데이터 리스트
-
+	
 	// Component
 	private ActionHandler actionListener;
 	private BasicPanel nowPanel;

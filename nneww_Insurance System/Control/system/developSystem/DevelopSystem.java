@@ -1,6 +1,7 @@
 package system.developSystem;
 
 import data.ISData;
+import data.activityPlanData.ActivityPlanData;
 import data.customerData.CustomerData;
 import data.employeeData.developEmployeeData.DeveloperData;
 import data.employeeData.developEmployeeData.InsuranceRatePermitManData;
@@ -23,7 +24,10 @@ public abstract class DevelopSystem extends ISSystem {
 	protected IntISDataList<SalesManData> salesManList; //개발자 리스트
 	protected IntISDataList<SalesManagerData> salesManagerList;  //보험요율계산하는 사람 리스트
 //	protected IntISDataList<CustomerData> customerList;
-
+	protected IntISDataList<AbsInsuranceData> insuranceList; //보험 데이터 리스트
+	protected IntISDataList<CustomerData> customerList; //보험 데이터 리스트
+	protected IntISDataList<ActivityPlanData> activityPlanList; //보험 데이터 리스트
+	
 	
 	// Initialize Time Use
 	@Override @SuppressWarnings("unchecked")

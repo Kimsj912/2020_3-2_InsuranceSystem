@@ -14,7 +14,8 @@ import system.developSystem.DevelopSystem;
 import system.developSystem.realDevelopSystem.developerAspect.DeveloperTaskSelectSystem;
 import system.developSystem.realDevelopSystem.insuranceRatePermitMan.SelectInsuranceRatePermitTask;
 import system.developSystem.realDevelopSystem.productPermitMan.SelectProductPermitTask;
-import system.salesSystem.realSalesSystem.SelectSalesManTask;
+import system.developSystem.realDevelopSystem.salesManAspect.SelectSalesManTask;
+import system.developSystem.realDevelopSystem.salesManagerAspect.SelectSalesManagerTask;
 
 public class LoginSystem extends DevelopSystem {
 
@@ -67,7 +68,7 @@ public class LoginSystem extends DevelopSystem {
 		case "LoginInsuranceRatePermitMan" : this.startNewSystem(new SelectInsuranceRatePermitTask()); break;
 		case "LoginProductPermitMan" : this.startNewSystem(new SelectProductPermitTask()); break;
 		case "salesMan": this.startNewSystem(new SelectSalesManTask()); break;
-//		case "salesManager": this.startNewSystem(new SelectSalesManagerTask()); break;
+		case "salesManager": this.startNewSystem(new SelectSalesManagerTask()); break;
 		}
 	}
 	
